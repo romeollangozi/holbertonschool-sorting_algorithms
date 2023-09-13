@@ -29,11 +29,11 @@ void swap(listint_t *firstNode, listint_t *secondNode, listint_t **list)
 
 void insertion_sort_list(listint_t **list)
 {
-	listint_t *sorted = *list, *unsorted;
+	listint_t *sorted, *unsorted;
 
 	if (list == NULL)
 		return;
-
+	sorted = *list;
 	while (sorted->next != NULL)
 	{
 		if (sorted->n > sorted->next->n)
