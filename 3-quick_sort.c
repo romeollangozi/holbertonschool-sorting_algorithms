@@ -36,6 +36,7 @@ int partition(int *arr, int l, int h, size_t size)
 		{
 			i++;
 			swap(arr + i, arr + j);
+			print_array(array, size);
 		}
 	}
 	swap(arr + i + 1, arr + h);
@@ -56,7 +57,6 @@ void sort_quick(int *array, int l, int h, size_t size)
 	if (l < h)
 	{
 		p = partition(array, l, h, size);
-		print_array(array, size);
 		sort_quick(array, l, p - 1, size);
 		sort_quick(array, p + 1, h, size);
 	}
